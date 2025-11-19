@@ -149,7 +149,7 @@ class DimensionalityReducer:
         tsne = TSNE(
             n_components=n_components,
             perplexity=min(perplexity, len(data) - 1),
-            n_iter=n_iter,
+            max_iter=n_iter,
             random_state=self.random_state
         )
 
